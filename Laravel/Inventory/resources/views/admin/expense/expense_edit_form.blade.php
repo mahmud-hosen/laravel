@@ -1,0 +1,61 @@
+@extends('admin.dashboard')
+
+@section('title')
+Add Category
+@endsection
+
+
+@section('dashboard_body')
+
+<form   action="{{route('expense_update',$expense->id)}}" method="POST" >
+
+    @csrf
+
+    @include('admin.includes.messages') 
+
+    			
+
+    <div class="form-group row ">
+        <label for="details" class="col-sm-2 col-form-label">Expense Details</label>
+        <div class="col-sm-10">
+            <textarea name="details" id="details" class="form-control" rows="5">{{$expense->details}}</textarea>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="amount" class="col-sm-2 col-form-label">Amount</label>
+        <div class="col-sm-10">
+            <input type="text" name="amount" class="form-control" id="amount" value="{{$expense->amount}}">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <input type="hidden" name="date" class="form-control" id="date" value="{{ date("d/m/y" )}}">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <input type="hidden" name="month" class="form-control" id="month" value="{{ date("F" )}}">
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <input type="hidden" name="year" class="form-control" id="year" value="{{ date("Y" )}}">
+        </div>
+    </div>
+    
+
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">EDIT</button>
+        </div>
+    </div>
+    
+</form>
+
+@endsection
