@@ -48,8 +48,8 @@ class AppServiceProvider extends ServiceProvider
 
             //--------------------- Count--------------------------
 
-       View::share('pending_orders_count',Order::where('order_status','pending')->count('order_status'));
-       View::share('aprove_orders_count',Order::where('order_status','aprove')->count('order_status'));
+      View::share('pending_orders_count',Order::where('order_status','pending')->count('order_status'));
+      View::share('aprove_orders_count',Order::where('order_status','aprove')->count('order_status'));
 
        View::share('customer_count',Customer::count('id'));
 
@@ -68,6 +68,8 @@ class AppServiceProvider extends ServiceProvider
        View::share('product_count',Product::count('id'));
        View::share('public_product',Product::where('publication_status',1)->count('id'));
        View::share('unpublic_product',Product::where('publication_status',0)->count('id'));
+       
+      
 
 
        $date = date("d/m/y");
@@ -82,6 +84,8 @@ class AppServiceProvider extends ServiceProvider
        View::share('today_sales', DB::table('orders')->where('order_date',$today_date)->sum('total'));
        View::share('yearly_sales',DB::table('orders')->Where('order_date', 'like', '%'.'-'.'%'.'-'.$year)->sum('total') );
        View::share('total_sales', DB::table('orders')->sum('total'));
+
+ 
 
 
 

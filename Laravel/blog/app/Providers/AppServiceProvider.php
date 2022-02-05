@@ -32,6 +32,7 @@ class AppServiceProvider extends ServiceProvider
         
         $setting = Setting::first();
         View::share('setting', $setting);
+        
 
     }
 }

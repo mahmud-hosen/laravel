@@ -36,7 +36,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-           //   Category table share to all page  2 way:   1)  use Illuminate\Support\Facades\View;   2) use App\Category;
+             
+           //  Category table share to all page  2 way:   1)  use Illuminate\Support\Facades\View;   2) use App\Category;
            // Way:1
 
            //  View::share('all_categories', Category::where('publication_status',1)->get());
@@ -74,36 +75,8 @@ class AppServiceProvider extends ServiceProvider
               View::share('totall_product', DB::table('products')->count('id'));
               View::share('totall_categories', DB::table('categories')->count('id'));
 
-
               
-
-
-
-
-
-
-
-
-
-
-
-            
-
-
-
              //View::share('count', DB::select("SELECT SUM(product_quantity) FROM carts"));
-
-
-
-
-             
-
-
-             
-
-             
-
-
 
 
              //$product_qt = DB::select("SELECT product_quantity FROM carts WHERE product_id = $p_id");
@@ -113,6 +86,7 @@ class AppServiceProvider extends ServiceProvider
 
 
             // SELECT SUM(carts.product_quantity*products.product_price) FROM  carts, products WHERE carts.product_id = products.id
+                 
 
             
 

@@ -71,9 +71,7 @@
         <div class="row mb-5">
           <div class="col-md-4">
             <h3 class="footer-heading mb-4">About Us</h3>
-            @if( $setting->description	 )
-              <p>{!! $setting->description	 !!} </p>
-            @endif
+            
           </div>
 
 
@@ -102,11 +100,7 @@
           <div>
               <h3 class="footer-heading mb-4">Connect With Us</h3>
               <p>
-                @if($setting->facebook)<a target="_blank" href="{{ $setting->facebook }}"><span class="icon-facebook pt-2 pr-2 pb-2 pl-0"></span></a> @endif
-                @if($setting->twitter)<a target="_blank" href="{{ $setting->twitter }}"><span class="icon-twitter p-2"></span></a> @endif
-                @if($setting->instagram)<a target="_blank" href="{{ $setting->instagram }}"><span class="icon-instagram p-2"></span></a> @endif
-                @if($setting->reddit)<a target="_blank" href="{{ $setting->reddit }}"><span class="icon-rss p-2"></span></a> @endif
-                @if($setting->email)<a target="_blank" href="{{ $setting->email }}"><span class="icon-envelope p-2"></span></a> @endif
+                
               </p>
             </div>
           </div>
@@ -115,7 +109,7 @@
         <div class="col-12 text-center">
             <p>
                This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-              <div class="mb-0">Developed By {{ $setting->copyright }}  on <a href="https://www.youtube.com/playlist?list=PLl4v4A2HI0YixTm5AsoTu-sKxiQti4-r6">Laravel Blog Development </a>Tutorial Series</div>
+              <div class="mb-0">Developed By   on <a href="https://www.youtube.com/playlist?list=PLl4v4A2HI0YixTm5AsoTu-sKxiQti4-r6">Laravel Blog Development </a>Tutorial Series</div>
               </p>
           </div>
         </div>
