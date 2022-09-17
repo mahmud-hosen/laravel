@@ -123,7 +123,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Math' => App\Facades\Math::class,
+        'Math' => App\Facades\Math::class,                  //Facades Bind key name
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,  //For Excel
         'PDF' => Barryvdh\DomPDF\Facade::class,
 

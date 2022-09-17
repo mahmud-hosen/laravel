@@ -20,8 +20,6 @@
  
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
 
-  
-
 
 </head>
 
@@ -44,9 +42,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                  
-                    
-                   
+                      
                 </tbody>
             </table>
 

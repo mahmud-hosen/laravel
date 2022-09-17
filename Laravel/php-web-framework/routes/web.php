@@ -19,6 +19,8 @@ Route::get('/serviceContainerPerson1', function(){
   });
 
 //..................  Service Container Way-2 .................... 
+ // At 1st Go to --> php-web-framework\app\Providers\AppServiceProvider.php
+ 
 Route::get('/serviceContainerPerson2', function(){
    $personInfo2 = app()->make('info2');
    echo $personInfo2;
@@ -241,9 +243,25 @@ $router->get('/object/{id?}', function($value = null){
 
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+//.............................   SSLCOMMERZ Start ..............................
+
+Route::get('/example1', 'SslCommerzPaymentController@exampleEasyCheckout');
+Route::get('/example2', 'SslCommerzPaymentController@exampleHostedCheckout');
+
+Route::post('/pay', 'SslCommerzPaymentController@index');
+Route::post('/pay-via-ajax', 'SslCommerzPaymentController@payViaAjax');
+
+Route::post('/success', 'SslCommerzPaymentController@success');
+Route::post('/fail', 'SslCommerzPaymentController@fail');
+Route::post('/cancel', 'SslCommerzPaymentController@cancel');
+
+Route::post('/ipn', 'SslCommerzPaymentController@ipn');
+//SSLCOMMERZ END
+
+
+
+

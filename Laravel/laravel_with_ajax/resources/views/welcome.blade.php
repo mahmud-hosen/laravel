@@ -96,6 +96,7 @@
                     <a   href="{{ route('live_search') }}"> Live Search</a><br> <br>
                     <a   href="{{ route('data_insert_with_show') }}"> Data insert with show</a><br> <br>
                     <a   href="{{ route('index') }}"> Yajra Contact_view </a><br> <br>
+                    <a   href="{{ route('middlewareTest') }}"> Middleware Tutorial </a><br> <br>
 
 
 
