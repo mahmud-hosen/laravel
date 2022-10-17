@@ -10,10 +10,11 @@ use App\Teacher;
 
 
 //..................  Service Container Way-1 .................... 
-app()->bind('info1', Person::class); //Person Service Create and bind Person class in service container using info1 key 
+app()->bind('info1', Person::class); //Person Service Create and bind Person class in service 
+//container using info1 key 
 
 Route::get('/serviceContainerPerson1', function(){
-  // $personInfo1 = app()->make('info1');    // Object create for service Person using binding key info1
+  // $personInfo1 = app()->make('info1');   // Object create for service Person using binding key info1
   // $personInfo1->setName('Kamal Hosen');  // Set value that Person service using object
   // echo $personInfo1->getName();          // Get Value that Person service
   });
